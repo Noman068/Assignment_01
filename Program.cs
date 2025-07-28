@@ -84,6 +84,32 @@ class MyClass
         Console.WriteLine($"reverse of {real} is : " + reversed + "\n\n");
     }
 
+    static void Factorial()
+    {
+        Console.Write("Enter number : ");
+        int num= Convert.ToInt32(Console.ReadLine());
+        int factorial = 1;
+        for(int i = num; i > 1; i--)
+        {
+            factorial *= i;
+        }
+        Console.WriteLine($"Factorial of {num} is = " + factorial + "\n\n");
+    }
+
+    static void LeapYear()
+    {
+        Console.Write("Enter year : ");
+        int year = Convert.ToInt32(Console.ReadLine());
+        if ((year % 4 == 0) && ((year % 100 != 0) || (year % 400 == 0)))
+        {
+            Console.WriteLine($"\n\n {year} is a leap year..\n\n");
+        }
+        else
+        {
+            Console.WriteLine($"\n\n {year} is not a leap year.\n\n");
+        }
+    }
+
     static void Main(string[] args)
     {
         while (true)
@@ -152,6 +178,12 @@ class MyClass
                     break;
                 case 5:
                     ReversedNumber();
+                    break;
+                case 6:
+                    Factorial();
+                    break;
+                case 7:
+                    LeapYear();
                     break;
             }
 
